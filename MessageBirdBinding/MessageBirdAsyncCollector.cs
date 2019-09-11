@@ -1,9 +1,6 @@
 ﻿using MessageBird;
 using Microsoft.Azure.WebJobs;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
 using System;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -13,15 +10,6 @@ namespace nrdkrmp.MessageBirdBinding
     {
         private MessageBirdConfiguration config;
         private MessageBirdAttribute attr;
-
-        private static readonly JsonSerializerSettings jsonSerializerSettings = new JsonSerializerSettings
-        {
-            ContractResolver = new DefaultContractResolver
-            {
-                NamingStrategy = new CamelCaseNamingStrategy()
-            },
-            Formatting = Formatting.Indented
-        };
 
 
         public MessageBirdAsyncCollector(MessageBirdConfiguration config, MessageBirdAttribute attr)
