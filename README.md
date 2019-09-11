@@ -6,4 +6,6 @@ This repo contains a sample project to demonstrate the architecture and plumbing
 
 ## Using the binding
 
-To use the binding, register a new developer account with https://messagebird.com. Put the sms webhook url (`https://rest.messagebird.com/messages`) in local.settings.json with the key `MessageBirdWebHookUrl`. Put your API key in local.settings.json with the key `MessageBirdApiKey`.
+To use the binding, register a new developer account with https://messagebird.com. Put the sms webhook url (`https://rest.messagebird.com/messages`) in local.settings.json (add this file to the ExampleCSharp project) with the key `MessageBirdWebHookUrl`. Put your API key in local.settings.json with the key `MessageBirdApiKey`.
+
+For more info see https://docs.microsoft.com/nl-nl/azure/azure-functions/functions-run-local.
